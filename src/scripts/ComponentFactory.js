@@ -1,3 +1,4 @@
+import Accordion from "./components/Accordion.js";
 import Carousel from "./components/Carousel.js";
 import Form from "./components/Form.js";
 import Header from "./components/Header.js";
@@ -11,6 +12,7 @@ export default class ComponentFactory {
       Carousel,
       Form,
       Scrolly,
+      Accordion,  
     };
     this.init();
   }

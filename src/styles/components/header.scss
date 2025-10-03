@@ -138,7 +138,7 @@
     /* Micro-animation JS du logo (présentement une rotation de 45 degrés vers la gauche en hover) */
 
     .animate {
-        transition: transform 0.4s $linear-bounce, color 0.4s $ease-out-expo;
+        // transition: transform 0.4s $linear-bounce, color 0.4s $ease-out-expo;
         width: 40px;
         height: 36px;
     }
