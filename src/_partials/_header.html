@@ -16,4 +16,28 @@
     <script src="scripts/main.js" defer></script>
   </head>
 
-  <body>
+  <body data-component="Scrolly" data-no-repeat>
+        <header class="header" data-component="Header" data-threshold="0.2">
+            <div class="wrapper">
+                <nav class="nav">
+                    <a href="index.html" class="logo">
+                        <svg class="icon animate">
+                            <use xlink:href="#icon-logo"></use>
+                        </svg>
+                    </a>
+
+                    <ul class="nav-desktop">
+                        <li><a href="#">Lien 1</a></li>
+                        <li><a href="#">Lien 2</a></li>
+                        <li><a href="#">Lien 3</a></li>
+                        <li><a href="#">Lien 4</a></li>
+                    </ul>
+
+                    <div class="nav-mobile">
+                        <button class="header-toggle js-toggle"><svg class="icon">
+                            <use xlink:href="#icon-menu"></use>
+                        </svg></button>
+                    </div>
+                </nav>
+            </div>
+        </header>

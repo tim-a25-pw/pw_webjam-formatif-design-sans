@@ -1,0 +1,313 @@
+/* ==========================================================================
+   form / component
+   ========================================================================== */
+.formulaire {
+    padding: var(--spacing-lg) 0;
+
+    overflow: hidden;
+
+    h2 {
+        padding-bottom: 30px;
+    }
+
+    h3 {
+        padding-bottom: 20px;
+    }
+}
+
+.requis {
+    opacity: 0;
+    color: var(--color-red);
+    margin: 0;
+}
+
+.form {
+    --input-radius: 12px;
+    --input-padding: 15px;
+
+    fieldset {
+        border: none;
+        padding: 0;
+    }
+
+    .grid {
+        display: grid;
+        gap: var(--spacing-sm);
+        grid-template-columns: 1fr 1fr;
+
+        @media screen and (max-width: $breakpoint-md) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .u-grid-fullwidth {
+        grid-column: 1 / -1 !important;
+    }
+}
+
+.form__list {
+    padding-bottom: 40px;
+
+    h4 {
+        padding-bottom: 15px;
+    }
+}
+
+.form__footer {
+    display: flex;
+    justify-content: flex-start;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        justify-content: center;
+    }
+}
+
+.form__body {
+    .is-sent & {
+        display: none;
+    }
+}
+
+.form__confirmation {
+    display: none;
+
+    .is-sent & {
+        display: block;
+    }
+}
+
+/*
+   input
+   ========================================================================== */
+
+.input__label {
+    display: block;
+    font-family: var(--font-primary);
+    font-size: var(--font-size-h4);
+    font-weight: 600;
+}
+
+.input__element {
+    border-radius: var(--input-radius);
+    background-color: var(--color-white);
+    border: 2px solid var(--color-tertiary);
+    box-shadow: none;
+    cursor: pointer;
+    font-family: var(--font-primary);
+    font-size: var(--font-size-h4);
+    outline: none;
+    padding: var(--input-padding);
+    width: 100%;
+
+    transition: all 0.4s $ease-out-expo;
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:active {
+        -webkit-box-shadow: inset 0 0 0 30px var(--color-white) !important;
+        -webkit-text-fill-color: inherit !important;
+    }
+
+    // hover
+    &:hover,
+    + .input__label:hover::before {
+        border: 2px solid var(--color-primary);
+        -webkit-box-shadow: none !important;
+    }
+
+    // focus
+    &:focus,
+    &:-webkit-autofill:focus,
+    &:focus + .input__label::before {
+        background-color: var(--color-tertiary);
+        border-color: var(--color-secondary);
+        box-shadow: none;
+        -webkit-box-shadow: none !important;
+    }
+
+    // autocomplete
+    &::placeholder {
+        color: var(--color-primary);
+    }
+}
+
+/*
+   select
+   ========================================================================== */
+.select {
+    position: relative;
+    .input__element {
+        appearance: none;
+        padding-right: var(--spacing-md);
+
+        &:invalid {
+            color: var(--color-primary);
+        }
+    }
+
+    option {
+        background-color: var(--color-white);
+        color: var(--color-primary);
+    }
+
+    &::after {
+        --size: 24px;
+        content: '';
+        background: url('../assets/images/icon-chevron-down.svg') no-repeat 50%
+            50%;
+        background-size: 100%;
+        height: var(--size);
+        position: absolute;
+        pointer-events: none;
+        top: 40%;
+        transform: translateY(20%);
+        right: var(--input-padding);
+        width: var(--size);
+    }
+}
+
+/*
+   textarea
+   ========================================================================== */
+
+.textarea {
+    .input__element {
+        resize: vertical;
+        height: 325px;
+        grid-column: -1;
+
+        @media screen and (max-width: $breakpoint-sm) {
+            height: 200px;
+        }
+    }
+}
+
+/*
+   checkbox + radio
+   ========================================================================== */
+
+.checkbox,
+.radio {
+    --active-scale: 1;
+
+    padding-bottom: 10px;
+
+    .input__element {
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+    }
+    .input__label {
+        --size: 28px;
+
+        cursor: pointer;
+        overflow: hidden;
+        padding-left: calc(var(--size) + var(--spacing-sm));
+        position: relative;
+
+        height: var(--size);
+        display: flex;
+        align-items: center;
+
+        &::before,
+        &::after {
+            content: '';
+            height: var(--size);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: var(--size);
+        }
+
+        &::before {
+            background-color: var(--color-white);
+            border-radius: var(--input-radius);
+            box-shadow: none;
+        }
+
+        &::after {
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.4s $ease-out-expo;
+        }
+    }
+
+    .input__element:checked + .input__label {
+        &::after {
+            opacity: 1;
+            transform: scale(var(--active-scale));
+        }
+    }
+}
+
+.checkbox {
+    .input__element {
+        &:focus,
+        &:-webkit-autofill:focus,
+        &:focus + .input__label::before {
+            background-color: var(--color-primary);
+        }
+    }
+
+    .input__label {
+        font-size: var(--font-size-content);
+        font-family: var(--font-secondary);
+    }
+
+    .input__label::before {
+        background-color: var(--color-primary);
+        border-radius: 8px;
+    }
+
+    .input__label::after {
+        background: url('../assets/images/icon-check.svg') no-repeat 50% 50%;
+        background-size: 50%;
+    }
+}
+
+.radio {
+    .input__label {
+        &::before {
+            border: 2px solid var(--color-primary);
+            border-radius: 100%;
+
+            &:hover {
+                border: 2px solid var(--color-secondary);
+            }
+        }
+
+        &::after {
+            --active-scale: 0.5;
+
+            background-color: var(--color-primary);
+            border-radius: 100%;
+        }
+    }
+}
+
+/*
+   error
+   ========================================================================== */
+
+.error {
+    .input__element,
+    &.checkbox .input__label::before,
+    &.radio .input__label::before,
+    .checkbox .input__label::before,
+    .radio .input__label::before {
+        box-shadow: inset 0 0 0 2px var(--color-red);
+
+        transition: all 0.4s $ease-out-expo;
+    }
+
+    .input__label {
+        color: var(--color-red);
+
+        transition: all 0.4s $ease-out-expo;
+    }
+
+    .requis {
+        opacity: 1;
+
+        transition: all 0.4s $ease-out-expo;
+    }
+}

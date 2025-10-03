@@ -1,0 +1,171 @@
+/* ==========================================================================
+   scrolly / component
+   ========================================================================== */
+
+.has-js {
+    *:has(> [data-scrolly='flipFromBottom'], [data-scrolly='flipFromTop']) {
+        perspective: 2000px;
+    }
+
+    [data-scrolly='fromBottom'] {
+        opacity: 0;
+        transform: translateY(60px);
+        transition: all 0.8s ease-out;
+
+        &.is-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    [data-scrolly='fromLeft'] {
+        opacity: 0;
+        transform: translateX(-60px);
+        transition: all 0.8s ease-out;
+
+        &.is-active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    [data-scrolly='fromTop'] {
+        opacity: 0;
+        transform: translateY(-60px);
+        transition: all 0.8s ease-out;
+
+        &.is-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    [data-scrolly='fromRight'] {
+        opacity: 0;
+        transform: translateX(60px);
+        transition: all 0.8s ease-out;
+
+        &.is-active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    [data-scrolly='fadeOut'] {
+        opacity: 0;
+        transition: all 0.8s ease-out;
+
+        &.is-active {
+            opacity: 1;
+        }
+    }
+
+    [data-scrolly='flipFromBottom'] {
+        opacity: 0;
+        transform: rotateX(90deg) translate3d(0, 60px, 0);
+        transition: all 0.8s ease-out;
+
+        &.is-active {
+            opacity: 1;
+            transform: rotateX(0) translate3d(0, 0, 0);
+        }
+    }
+
+    [data-scrolly='flipFromTop'] {
+        opacity: 0;
+        transform: rotateX(-90deg) translate3d(0, -60px, 0);
+        transition: all 0.8s ease-out;
+
+        &.is-active {
+            opacity: 1;
+            transform: rotateX(0) translate3d(0, 0, 0);
+        }
+    }
+
+    [data-scrolly='compressFromBottom'] {
+        opacity: 0;
+        transform: translateY(100px);
+        transition: all 0.8s ease-out;
+        gap: var(--spacing-xl);
+
+        &.is-active {
+            opacity: 1;
+            gap: var(--spacing-sm);
+            transform: translateY(0);
+        }
+    }
+
+    [data-scrolly='compressFromRight'] {
+        opacity: 0;
+        transform: translateX(200px);
+        transition: all 0.8s ease-out;
+        gap: var(--spacing-xxl);
+
+        &.is-active {
+            opacity: 1;
+            gap: var(--spacing-sm);
+            transform: translateX(0);
+        }
+    }
+
+    [data-scrolly='compressFromLeft'] {
+        opacity: 0;
+        transform: translateX(-200px);
+        transition: all 0.8s ease-out;
+        gap: var(--spacing-xxl);
+
+        &.is-active {
+            opacity: 1;
+            gap: var(--spacing-sm);
+            transform: translateX(0);
+        }
+    }
+
+    [data-scrolly='formFromLeft'] {
+        opacity: 0;
+        transform: translateX(-500px);
+        transition: all 0.8s ease-out;
+
+        &.is-active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    [data-scrolly='formFromRight'] {
+        opacity: 0;
+        transform: translateX(500px);
+        transition: all 0.8s ease-out;
+
+        &.is-active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    [data-scrolly='heroFromBottom'] {
+        opacity: 0;
+        transform: translateY(200px);
+        transition: all 0.8s ease-out;
+        gap: var(--spacing-xxl);
+
+        &.is-active {
+            opacity: 1;
+            gap: var(--spacing-xs);
+            transform: translateY(0);
+        }
+    }
+
+    [data-scrolly='calendarFromBottom'] {
+        opacity: 0;
+        transform: translateY(60px);
+        transition: all 0.8s ease-out;
+        gap: var(--spacing-md);
+
+        &.is-active {
+            opacity: 1;
+            gap: 0;
+            transform: translateY(0);
+        }
+    }
+}
