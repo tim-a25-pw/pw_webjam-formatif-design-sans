@@ -9,11 +9,26 @@
 
     .nav {
         ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             list-style: none;
             padding-left: 0;
+            height: 100%;
+        }
+
+        .logo-reseaux {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .logo {
+            padding-bottom: 40px;
         }
 
         a {
+            position: relative;
             &::after {
                 content: '';
                 position: absolute;
