@@ -4,6 +4,7 @@ import Form from './components/Form.js';
 import Header from './components/Header.js';
 import Scrolly from './components/Scrolly.js';
 import Tabs from './components/Tabs.js';
+import Youtube from './components/Youtube.js';
 
 export default class ComponentFactory {
   constructor() {
@@ -15,6 +16,7 @@ export default class ComponentFactory {
       Scrolly,
       Accordion,
       Tabs,
+      Youtube,
     };
     this.init();
   }

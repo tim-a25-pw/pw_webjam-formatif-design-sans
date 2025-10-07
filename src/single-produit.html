@@ -1,19 +1,64 @@
+{% include '_partials/_header.html' %}
 <section class="description">
-    <div class="media">
-        <img src="#" alt="" />
-    </div>
-    <div class="content">
-        <h3>Barbecue au charbon – Modèle Grizzly XL</h3>
-        <h2>149,90 $</h2>
-        <h4>Description:</h4>
-        <p>Barbecue robuste en acier peint, grande grille de cuisson, idéal pour repas en extérieur jusqu’à 10 personnes.</p>
-        <ul>
-            <h4>Caractéristiques techniques :</h4>
-            <li>Dimensions : 110 x 60 x 100 cm</li>
-            <li>Matériau : Acier inoxydable</li>
-            <li>Poids : 25 kg</li>
-            <li>Roues : Oui</li>
-        </ul>
-        <p>Accessories additionnels : Bac récupérateur, tablette latérale</p>
+    <div class="wrapper">
+        <div class="media">
+            <img src="assets/images/image-hero-bbq.png" alt="" />
+            <a href="#" class="button">AJOUTER AU PANIER</a>
+        </div>
+        <div class="content">
+            <h3>Barbecue au charbon – Modèle Grizzly XL</h3>
+            <h2>149,90 $</h2>
+            <h4>Description:</h4>
+            <p>Barbecue robuste en acier peint, grande grille de cuisson, idéal pour repas en extérieur jusqu’à 10 personnes.</p>
+            <h4 class="space">Caractéristiques techniques :</h4>
+            <ul>
+                <li>Dimensions : 110 x 60 x 100 cm</li>
+                <li>Matériau : Acier inoxydable</li>
+                <li>Poids : 25 kg</li>
+                <li>Roues : Oui</li>
+            </ul>
+            <p>Accessories additionnels : Bac récupérateur, tablette latérale</p>
+        </div>
     </div>
 </section>
+
+<section class="gallerie">
+    <div class="wrapper">
+        <h2>Gallerie</h2>
+        <div class="swiper" data-component="Carousel" data-loop data-split="1.1">
+            <div class="categories swiper-wrapper">
+                <div class="categorie swiper-slide">
+                    <div class="categorie__media">
+                        <img src="assets/images/image-bbq-1.png" alt="Swiper" />
+                    </div>
+                </div>
+                <div class="categorie swiper-slide">
+                    <div class="categorie__media">
+                        <img src="assets/images/image-bbq-2.png" alt="Swiper" />
+                    </div>
+                </div>
+                <div class="categorie swiper-slide">
+                    <div class="categorie__media">
+                        <img src="assets/images/image-bbq-3.png" alt="Swiper" />
+                    </div>
+                </div>
+                <div class="categorie swiper-slide">
+                    <div class="categorie__media">
+                        <img src="assets/images/image-bbq-4.png" alt="Swiper" />
+                    </div>
+                </div>
+            </div>
+            <!-- N'oubliez pas votre pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+<section class="commentaire">
+    <div class="wrapper">
+        <h2>Commentaires des clients</h2>
+        <div class="truc commentaire1">⭐⭐⭐⭐⭐ – "Chauffe vite, facile à monter."</div>
+        <div class="truc commentaire2">⭐⭐⭐⭐☆ – "Solide mais un peu encombrant."</div>
+    </div>
+</section>
+{% include '_partials/_footer.html' %}
