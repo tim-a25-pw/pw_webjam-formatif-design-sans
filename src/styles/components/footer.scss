@@ -9,8 +9,48 @@
 
     .nav {
         ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             list-style: none;
-            padding-left: none;
+            padding-left: 0;
+            height: 100%;
+        }
+
+        .logo-reseaux {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .logo {
+            padding-bottom: 40px;
+        }
+
+        a {
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background-color: var(--color-primary);
+                width: 0;
+                height: 2px;
+                opacity: 0;
+                transition: all 0.4s $ease-out-expo;
+                border-radius: 24px;
+            }
+
+            &:hover {
+                color: var(--color-primary);
+                text-decoration: none;
+
+                &::after {
+                    width: 100%;
+                    opacity: 1;
+                }
+            }
         }
     }
 }

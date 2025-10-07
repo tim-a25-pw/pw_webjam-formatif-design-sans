@@ -1,0 +1,33 @@
+section.categories {
+    padding: 100px 0;
+    h2 {
+        padding-bottom: 60px;
+    }
+}
+
+.categorie__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.categorie__info {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-bottom: 24px;
+}
+
+.grilles {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    gap: 50px;
+
+    .card {
+        max-width: 300px;
+    }
+    p {
+        padding: 10px 0 25px 0;
+    }
+}
