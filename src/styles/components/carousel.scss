@@ -16,6 +16,11 @@
     background: var(--color-black);
 }
 
+.swiper-pagination {
+    margin-top: 40px;
+    position: static;
+}
+
 .swiper-full {
     overflow: visible;
 }

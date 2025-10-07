@@ -1,0 +1,21 @@
+.footer {
+    background-color: var(--color-bg-primary);
+    color: var(--color-white);
+    padding: 60px 0;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav {
+        ul {
+            list-style: none;
+            padding-left: none;
+        }
+    }
+}
+
+.reseaux {
+    display: flex;
+    gap: 24px;
+}
