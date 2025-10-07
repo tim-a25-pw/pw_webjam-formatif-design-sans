@@ -1,0 +1,14 @@
+.guide {
+    padding-bottom: var(--spacing-lg);
+    h2 {
+        padding: var(--spacing-md) 0;
+    }
+    h3 {
+        padding-bottom: var(--spacing-md);
+    }
+    .card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-lg);
+    }
+}
