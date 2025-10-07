@@ -1,7 +1,12 @@
 .hero {
     position: relative;
-    height: 70vh;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+    .wrapper {
+        overflow: hidden;
+    }
 }
 
 .hero__media {
@@ -20,11 +25,15 @@
         background-color: rgba($color: #000000, $alpha: 0.3);
         z-index: 4;
     }
+
+    overflow: hidden;
+
     img {
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
+        overflow: hidden;
     }
 }
 
