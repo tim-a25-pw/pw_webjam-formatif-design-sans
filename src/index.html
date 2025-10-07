@@ -1,17 +1,112 @@
 {% include '_partials/_header.html' %}
 
-<h1>À toi de jouer! ;)</h1>
-<div class="accordion" data-component="Accordion">
-            <div class="accordion__container js-acc-header">
-                <div class="accordion__header bouton bouton--card">
-                    <h3>Titre Accordion</h3>
-                    <div class="header__icons">
-                        <svg class="icon icon--sm up">
-                            <use xlink:href="#icon-chevron-left"></use>
-                        </svg>
+<!-- Section Hero -->
+<section class="hero">
+    <div class="wrapper">
+        <div class="hero__media">
+            <img src="assets/images/placeholder.png" alt="Image hero produits" />
+        </div>
+        <div class="hero__content">
+            <h1>Besoin de réno?</h1>
+            <a class="button" href="produits.html">Voir nos produits</a>
+        </div>
+    </div>
+</section>
+
+<!-- Section Catégories -->
+<section class="categories">
+    <div class="wrapper">
+        <div class="swiper" data-component="Carousel" data-loop data-slides="1.1">
+            <div class="categories swiper-wrapper">
+                <div class="categorie swiper-slide">
+                    <div class="categorie__media">
+                        <img src="assets/images/marteau.png" alt="Swiper" />
+                    </div>
+                    <div class="categorie__content">
+                        <div class="categorie__info">
+                            <svg class="icon">
+                                <use href="#icon-plomberie"></use>
+                            </svg>
+                            <h3>Plomberie</h3>
+                            <a href="plomberie.html" class="button">Voir plus</a>
+                        </div>
                     </div>
                 </div>
-                <div class="accordion__content">Texte</div>
+                <div class="categorie swiper-slide">
+                    <div class="categorie__media">
+                        <img src="assets/images/marteau.png" alt="Swiper" />
+                    </div>
+                    <div class="categorie__content">
+                        <div class="categorie__info">
+                            <svg class="icon">
+                                <use href="#icon-plomberie"></use>
+                            </svg>
+                            <h3>Plomberie</h3>
+                            <a href="plomberie.html" class="button">Voir plus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorie swiper-slide">
+                    <div class="categorie__media">
+                        <img src="assets/images/marteau.png" alt="Swiper" />
+                    </div>
+                    <div class="categorie__content">
+                        <div class="categorie__info">
+                            <svg class="icon">
+                                <use href="#icon-plomberie"></use>
+                            </svg>
+                            <h3>Plomberie</h3>
+                            <a href="plomberie.html" class="button">Voir plus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorie swiper-slide">
+                    <div class="categorie__media">
+                        <img src="assets/images/marteau.png" alt="Swiper" />
+                    </div>
+                    <div class="categorie__content">
+                        <div class="categorie__info">
+                            <svg class="icon">
+                                <use href="#icon-plomberie"></use>
+                            </svg>
+                            <h3>Plomberie</h3>
+                            <a href="plomberie.html" class="button">Voir plus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorie swiper-slide">
+                    <div class="categorie__media">
+                        <img src="assets/images/marteau.png" alt="Swiper" />
+                    </div>
+                    <div class="categorie__content">
+                        <div class="categorie__info">
+                            <svg class="icon">
+                                <use href="#icon-plomberie"></use>
+                            </svg>
+                            <h3>Plomberie</h3>
+                            <a href="plomberie.html" class="button">Voir plus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorie swiper-slide">
+                    <div class="categorie__media">
+                        <img src="assets/images/marteau.png" alt="Swiper" />
+                    </div>
+                    <div class="categorie__content">
+                        <div class="categorie__info">
+                            <svg class="icon">
+                                <use href="#icon-plomberie"></use>
+                            </svg>
+                            <h3>Plomberie</h3>
+                            <a href="plomberie.html" class="button">Voir plus</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-</div>
+            <!-- N'oubliez pas votre pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
 {% include '_partials/_footer.html' %}
