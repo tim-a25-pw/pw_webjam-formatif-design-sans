@@ -54,3 +54,113 @@
         <div class="hero__content"></div>
     </div>
 </section>
+
+<!-- Section form -->
+<section class="formulaire">
+    <div class="wrapper">
+        <form action="" class="form" autocomplete="off" data-component="Form">
+            <div class="form__body">
+                <h2 data-scrolly="fromBottom">Formulaire requête citoyenne</h2>
+                <h3 data-scrolly="fromBottom">Informations personnelles</h3>
+                <fieldset class="grid">
+                    <div class="input" data-scrolly="formFromLeft">
+                        <label class="input__label" for="firstname">Prénom</label>
+                        <input class="input__element" type="text" name="firstname" id="firstname" placeholder="ex.: Gabriel" required />
+                        <p class="requis">Ce champ est requis</p>
+                    </div>
+                    <div class="input" data-scrolly="formFromRight">
+                        <label class="input__label" for="lastname">Nom</label>
+                        <input class="input__element" type="text" name="lastname" id="lastname" placeholder="ex.: Martineau" required />
+                        <p class="requis">Ce champ est requis</p>
+                    </div>
+                    <div class="input" data-scrolly="formFromLeft">
+                        <label class="input__label" for="adress">Adresse (numéro civique + rue)</label>
+                        <input class="input__element" type="text" name="adress" id="adress" placeholder="ex.: 1550 rue Chambly" required />
+                        <p class="requis">Ce champ est requis</p>
+                    </div>
+                    <div class="input" data-scrolly="formFromRight">
+                        <label class="input__label" for="postalcode">Code postal</label>
+                        <input class="input__element" type="text" name="postalcode" id="postalcode" placeholder="ex.: J3X 1F8" required />
+                        <p class="requis">Ce champ est requis</p>
+                    </div>
+                    <div class="input" data-scrolly="formFromLeft">
+                        <label class="input__label" for="city">Ville</label>
+                        <input class="input__element" type="text" name="city" id="city" placeholder="ex.: Longueuil" required />
+                        <p class="requis">Ce champ est requis</p>
+                    </div>
+                    <div class="input select" data-scrolly="formFromRight">
+                        <label class="input__label" for="province">Province</label>
+                        <select class="input__element" name="province" id="province" required>
+                            <option value="" hidden>Choisir une province</option>
+                            <option value="qc">Québec</option>
+                            <option value="on">Ontario</option>
+                            <option value="al">Alberta</option>
+                        </select>
+                        <p class="requis">Ce champ est requis</p>
+                    </div>
+                    <div class="input" data-scrolly="formFromLeft">
+                        <label class="input__label" for="email">Adresse courriel</label>
+                        <input class="input__element" type="email" name="email" id="email" placeholder="edouard@cegepmontpetit.ca" required />
+                        <p class="requis">Ce champ est requis</p>
+                    </div>
+                    <div class="input" data-scrolly="formFromRight">
+                        <label class="input__label" for="phone">Numéro de téléphone</label>
+                        <input
+                            class="input__element"
+                            type="tel"
+                            name="phone"
+                            id="phone"
+                            placeholder="(555) 666-7777"
+                            pattern="^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s\.\-]?\d{3}[\s\.\-]?\d{4}$"
+                            required
+                        />
+                        <p class="requis">Ce champ est requis</p>
+                    </div>
+
+                    <div class="form__list" data-input-container data-scrolly="fromBottom">
+                        <h4>Méthode de contact préférée</h4>
+                        <div class="input radio">
+                            <input class="input__element" type="radio" name="choix[]" id="choixcourriel" value="courriel" required />
+                            <label class="input__label" for="choixcourriel">Courriel</label>
+                        </div>
+                        <div class="input radio">
+                            <input class="input__element" type="radio" name="choix[]" id="choixtel" value="tel" required />
+                            <label class="input__label" for="choixtel">Téléphone</label>
+                        </div>
+                        <p class="requis">Ce champ est requis</p>
+                    </div>
+                </fieldset>
+                <h3 data-scrolly="fromBottom">Requête citoyenne</h3>
+                <fieldset class="grid">
+                    <div class="input select" data-scrolly="formFromLeft">
+                        <label class="input__label" for="sujet">Sujet</label>
+                        <select class="input__element" name="sujet" id="sujet" required>
+                            <option value="" hidden>Choisir un sujet</option>
+                            <option value="qc">Permis de stationnement</option>
+                            <option value="on">Demande de renseignements</option>
+                            <option value="al">Réservation de salle</option>
+                        </select>
+                        <p class="requis">Ce champ est requis</p>
+                    </div>
+                    <div class="input textarea u-grid-fullwidth" data-scrolly="formFromLeft">
+                        <label class="input__label" for="comment">Commentaires (optionnel)</label>
+                        <textarea class="input__element" name="comment" id="comment" placeholder="Écrire ici"></textarea>
+                    </div>
+                    <div class="input checkbox" data-scrolly="fromBottom">
+                        <input class="input__element" type="checkbox" name="optin[]" id="optin" value="true" required />
+                        <label class="input__label" for="optin">J'accepte les conditions d'utilisation en cliquant sur cette case.</label>
+                        <p class="requis">Ce champ est requis</p>
+                    </div>
+                </fieldset>
+                <footer class="form__footer" data-scrolly="fromBottom">
+                    <button class="button js-button">Soumettre</button>
+                </footer>
+            </div>
+
+            <div class="form__confirmation">
+                <h2>Merci d'avoir rempli votre requête citoyenne.</h2>
+                <h3>Votre formulaire a bien été envoyé et il sera pris en charge dès que possible.</h3>
+            </div>
+        </form>
+    </div>
+</section>
