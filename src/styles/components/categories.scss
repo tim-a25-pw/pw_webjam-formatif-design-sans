@@ -22,12 +22,9 @@ section.categories {
 .grilles {
     display: grid;
     grid-template-columns: 3fr 3fr 3fr;
+    gap: 50px;
 
     .card {
-        max-width: 200px;
-
-        p {
-            max-width: 100px;
-        }
+        max-width: 300px;
     }
 }
