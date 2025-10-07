@@ -1,0 +1,20 @@
+section.categories {
+    padding: 100px 0;
+    h2 {
+        padding-bottom: 60px;
+    }
+}
+
+.categorie__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.categorie__info {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-bottom: 24px;
+}
