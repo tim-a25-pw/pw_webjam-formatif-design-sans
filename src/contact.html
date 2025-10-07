@@ -1,0 +1,86 @@
+{% include '_partials/_header.html' %}
+
+<section class="adresse">
+    <div class="wrapper">
+        <div class="map">
+            <img src="assets/images/contact_carte.jpg" alt="carte">
+        </div>
+        <div class="text">
+            <div class="coords">
+                <h4>Coordonnées</h4>
+                <a href="#" class="content">
+                    <svg class="icon icon--md">
+                        <use href="#icon-adresse"></use>
+                    </svg>
+                    111 boulevard Lorem Ipsum, Québec, J3G 123</a>
+                <a href="#" class="content">
+                    <svg class="icon icon--md">
+                        <use href="#icon-phone"></use>
+                    </svg>
+                    (123) 456-7890</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="formulaire">
+    <div class="wrapper">
+        <h2>Service client</h2>
+        <p>Pour joindre le service client, veuillez remplir ce formulaire.</p>
+        <form action="" class="form">
+            <fieldset class="name">
+                <div class="input">
+                    <label class="input__label" for="firstname">Votre prénom</label>
+                    <input type="text" id="firstname" placeholder="Jean">
+                </div>
+
+                <div class="input">
+                    <label class="input__label" for="lastname">Votre nom de famille</label>
+                    <input type="text" id="lastname" placeholder="Tremblay">
+                </div>
+            </fieldset>
+            <fieldset class="contact">
+                <div class="input">
+                    <label class="input__label" for="phone">Votre numéro de téléphone</label>
+                    <input type="text" id="phone" placeholder="(450) 123-4567">
+                </div>
+                <div class="input">
+                    <label class="input__label" for="mail">Votre courriel</label>
+                    <input type="text" id="mail" placeholder="jeantremblay@example.com">
+                </div>
+            </fieldset>
+            <fieldset class="options">
+                <div class="input">
+                    <label class="input__label" for="why">Pour quelle raison nous contactez-vous?</label>
+                    <select name="why" id="why">
+                        <option value="default">Choisir une option</option>
+                        <option value="refund">Remboursement</option>
+                        <option value="exchange">Échange</option>
+                        <option value="complaint">Plainte</option>
+                    </select>
+                </div>
+
+                <div class="input">
+                    <div class="radio">
+                        <input type="radio" id="phone" name="how" value="Par téléphone">
+                        <label class="input__label" for="phone">Par téléphone</label>
+                    </div>
+
+                    <div class="radio">
+                        <input type="radio" id="mail" name="how" value="Par courriel">
+                        <label class="input__label" for="mail">Par courriel</label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="message">
+                <div class="input">
+                    <label for="comment">Votre message</label>
+                    <textarea name="comment" id="comment"></textarea>
+                </div>
+            </fieldset>
+            <button class="button"> Envoyer</button>
+        </form>
+    </div>
+</section>
+
+{% include '_partials/_footer.html' %}

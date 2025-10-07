@@ -1,0 +1,12 @@
+.adresse{
+    .wrapper{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+
+        .coords{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+}
