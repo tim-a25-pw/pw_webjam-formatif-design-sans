@@ -1,0 +1,46 @@
+.description {
+    padding: 50px 0;
+    .wrapper {
+        display: grid;
+        grid-template-columns: 6fr 6fr;
+
+        .media {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                padding-bottom: 20px;
+            }
+            h2 {
+                padding-bottom: 20px;
+            }
+            h4 {
+                padding: 20px 0;
+            }
+            ul {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+.gallerie {
+    padding: 50px 0;
+
+    h2 {
+        padding: 20px 0;
+    }
+}
+.commentaire {
+    padding: 50px 0 100px 0;
+
+    h2 {
+        padding: 20px 0;
+    }
+}
